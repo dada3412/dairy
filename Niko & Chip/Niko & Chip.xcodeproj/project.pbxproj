@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0303EEC61CD2636C0015DE12 /* NCHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0303EEC51CD2636C0015DE12 /* NCHomeTableViewCell.xib */; };
+		0303EECF1CD2668C0015DE12 /* NCHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0303EECE1CD2668C0015DE12 /* NCHomeTableViewCell.m */; };
+		0303EED31CD2694B0015DE12 /* NCDairy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0303EED21CD2694B0015DE12 /* NCDairy.m */; };
+		0303EED61CD26A9E0015DE12 /* NCDairyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0303EED51CD26A9E0015DE12 /* NCDairyManager.m */; };
+		03125B741CCC6D2200097CDA /* NCHomeToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 03125B731CCC6D2200097CDA /* NCHomeToolbar.m */; };
+		03125B7A1CCE887D00097CDA /* NCTableViewSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 03125B791CCE887D00097CDA /* NCTableViewSelector.m */; };
+		0325024C1CDBCEF200E4D8A9 /* NCDairyEdite.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325024A1CDBCEF200E4D8A9 /* NCDairyEdite.m */; };
+		0325024D1CDBCEF200E4D8A9 /* NCDairyEdite.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0325024B1CDBCEF200E4D8A9 /* NCDairyEdite.xib */; };
+		032502501CDBD14100E4D8A9 /* NCImageSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0325024F1CDBD14100E4D8A9 /* NCImageSection.m */; };
+		032502571CDCB0CB00E4D8A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 032502561CDCB0CB00E4D8A9 /* Images.xcassets */; };
+		033F91231CCAB99800AD0740 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 033F91221CCAB99800AD0740 /* main.m */; };
+		033F91261CCAB99800AD0740 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 033F91251CCAB99800AD0740 /* AppDelegate.m */; };
+		033F912E1CCAB99800AD0740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033F912D1CCAB99800AD0740 /* Assets.xcassets */; };
+		033F91421CCABE0A00AD0740 /* NCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 033F91411CCABE0A00AD0740 /* NCTabBar.m */; };
+		033F91451CCABE7200AD0740 /* NCMainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033F91441CCABE7200AD0740 /* NCMainTabBarViewController.m */; };
+		037398811CD4362400818B35 /* NCAddImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0373987F1CD4362400818B35 /* NCAddImageCell.m */; };
+		037398851CD4F79000818B35 /* NCImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 037398841CD4F79000818B35 /* NCImageStore.m */; };
+		037398891CD4F82200818B35 /* NCImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 037398871CD4F82200818B35 /* NCImageViewCell.m */; };
+		0373988A1CD4F82200818B35 /* NCImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037398881CD4F82200818B35 /* NCImageViewCell.xib */; };
+		0389E6001CD0A235007AD76C /* NCHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0389E5FF1CD0A235007AD76C /* NCHomeTableViewController.m */; };
+		0389E6031CD0A9C2007AD76C /* NCMainHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0389E6021CD0A9C2007AD76C /* NCMainHeaderView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0303EEC51CD2636C0015DE12 /* NCHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCHomeTableViewCell.xib; sourceTree = "<group>"; };
+		0303EECD1CD2668C0015DE12 /* NCHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCHomeTableViewCell.h; sourceTree = "<group>"; };
+		0303EECE1CD2668C0015DE12 /* NCHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCHomeTableViewCell.m; sourceTree = "<group>"; };
+		0303EED11CD2694B0015DE12 /* NCDairy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDairy.h; sourceTree = "<group>"; };
+		0303EED21CD2694B0015DE12 /* NCDairy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDairy.m; sourceTree = "<group>"; };
+		0303EED41CD26A9E0015DE12 /* NCDairyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDairyManager.h; sourceTree = "<group>"; };
+		0303EED51CD26A9E0015DE12 /* NCDairyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDairyManager.m; sourceTree = "<group>"; };
+		03125B721CCC6D2200097CDA /* NCHomeToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCHomeToolbar.h; sourceTree = "<group>"; };
+		03125B731CCC6D2200097CDA /* NCHomeToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCHomeToolbar.m; sourceTree = "<group>"; };
+		03125B781CCE887D00097CDA /* NCTableViewSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTableViewSelector.h; sourceTree = "<group>"; };
+		03125B791CCE887D00097CDA /* NCTableViewSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTableViewSelector.m; sourceTree = "<group>"; };
+		032502491CDBCEF200E4D8A9 /* NCDairyEdite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDairyEdite.h; sourceTree = "<group>"; };
+		0325024A1CDBCEF200E4D8A9 /* NCDairyEdite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDairyEdite.m; sourceTree = "<group>"; };
+		0325024B1CDBCEF200E4D8A9 /* NCDairyEdite.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCDairyEdite.xib; sourceTree = "<group>"; };
+		0325024E1CDBD14100E4D8A9 /* NCImageSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCImageSection.h; sourceTree = "<group>"; };
+		0325024F1CDBD14100E4D8A9 /* NCImageSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCImageSection.m; sourceTree = "<group>"; };
+		032502561CDCB0CB00E4D8A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		033F911E1CCAB99800AD0740 /* Niko & Chip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Niko & Chip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		033F91221CCAB99800AD0740 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		033F91241CCAB99800AD0740 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		033F91251CCAB99800AD0740 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		033F912D1CCAB99800AD0740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		033F91321CCAB99800AD0740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		033F91401CCABE0A00AD0740 /* NCTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTabBar.h; sourceTree = "<group>"; };
+		033F91411CCABE0A00AD0740 /* NCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTabBar.m; sourceTree = "<group>"; };
+		033F91431CCABE7200AD0740 /* NCMainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMainTabBarViewController.h; sourceTree = "<group>"; };
+		033F91441CCABE7200AD0740 /* NCMainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMainTabBarViewController.m; sourceTree = "<group>"; };
+		033F91461CCAC11900AD0740 /* CommenDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommenDefine.h; sourceTree = "<group>"; };
+		0373987E1CD4362400818B35 /* NCAddImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAddImageCell.h; sourceTree = "<group>"; };
+		0373987F1CD4362400818B35 /* NCAddImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCAddImageCell.m; sourceTree = "<group>"; };
+		037398831CD4F79000818B35 /* NCImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCImageStore.h; sourceTree = "<group>"; };
+		037398841CD4F79000818B35 /* NCImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCImageStore.m; sourceTree = "<group>"; };
+		037398861CD4F82200818B35 /* NCImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCImageViewCell.h; sourceTree = "<group>"; };
+		037398871CD4F82200818B35 /* NCImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCImageViewCell.m; sourceTree = "<group>"; };
+		037398881CD4F82200818B35 /* NCImageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCImageViewCell.xib; sourceTree = "<group>"; };
+		0389E5FE1CD0A235007AD76C /* NCHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCHomeTableViewController.h; sourceTree = "<group>"; };
+		0389E5FF1CD0A235007AD76C /* NCHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCHomeTableViewController.m; sourceTree = "<group>"; };
+		0389E6011CD0A9C2007AD76C /* NCMainHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMainHeaderView.h; sourceTree = "<group>"; };
+		0389E6021CD0A9C2007AD76C /* NCMainHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMainHeaderView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		033F911B1CCAB99800AD0740 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0303EEC41CD262D40015DE12 /* 主页 */ = {
+			isa = PBXGroup;
+			children = (
+				0389E5FE1CD0A235007AD76C /* NCHomeTableViewController.h */,
+				0389E5FF1CD0A235007AD76C /* NCHomeTableViewController.m */,
+				0303EECD1CD2668C0015DE12 /* NCHomeTableViewCell.h */,
+				0303EECE1CD2668C0015DE12 /* NCHomeTableViewCell.m */,
+				0303EEC51CD2636C0015DE12 /* NCHomeTableViewCell.xib */,
+				0389E6011CD0A9C2007AD76C /* NCMainHeaderView.h */,
+				0389E6021CD0A9C2007AD76C /* NCMainHeaderView.m */,
+			);
+			name = "主页";
+			sourceTree = "<group>";
+		};
+		0303EED01CD2691D0015DE12 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				0303EED11CD2694B0015DE12 /* NCDairy.h */,
+				0303EED21CD2694B0015DE12 /* NCDairy.m */,
+				037398831CD4F79000818B35 /* NCImageStore.h */,
+				037398841CD4F79000818B35 /* NCImageStore.m */,
+				0303EED41CD26A9E0015DE12 /* NCDairyManager.h */,
+				0303EED51CD26A9E0015DE12 /* NCDairyManager.m */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		0323DDED1CD3C87C00A9AD85 /* 日记编辑页面 */ = {
+			isa = PBXGroup;
+			children = (
+				032502491CDBCEF200E4D8A9 /* NCDairyEdite.h */,
+				0325024A1CDBCEF200E4D8A9 /* NCDairyEdite.m */,
+				0325024B1CDBCEF200E4D8A9 /* NCDairyEdite.xib */,
+				0325024E1CDBD14100E4D8A9 /* NCImageSection.h */,
+				0325024F1CDBD14100E4D8A9 /* NCImageSection.m */,
+				0373987E1CD4362400818B35 /* NCAddImageCell.h */,
+				0373987F1CD4362400818B35 /* NCAddImageCell.m */,
+				037398861CD4F82200818B35 /* NCImageViewCell.h */,
+				037398871CD4F82200818B35 /* NCImageViewCell.m */,
+				037398881CD4F82200818B35 /* NCImageViewCell.xib */,
+			);
+			name = "日记编辑页面";
+			sourceTree = "<group>";
+		};
+		033F91151CCAB99800AD0740 = {
+			isa = PBXGroup;
+			children = (
+				032502561CDCB0CB00E4D8A9 /* Images.xcassets */,
+				033F91461CCAC11900AD0740 /* CommenDefine.h */,
+				0303EED01CD2691D0015DE12 /* data */,
+				033F913C1CCABD5F00AD0740 /*  控件 */,
+				033F91381CCAB9B500AD0740 /* 主框架 */,
+				0303EEC41CD262D40015DE12 /* 主页 */,
+				0323DDED1CD3C87C00A9AD85 /* 日记编辑页面 */,
+				033F91201CCAB99800AD0740 /* Niko & Chip */,
+				033F911F1CCAB99800AD0740 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		033F911F1CCAB99800AD0740 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				033F911E1CCAB99800AD0740 /* Niko & Chip.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		033F91201CCAB99800AD0740 /* Niko & Chip */ = {
+			isa = PBXGroup;
+			children = (
+				033F91241CCAB99800AD0740 /* AppDelegate.h */,
+				033F91251CCAB99800AD0740 /* AppDelegate.m */,
+				033F912D1CCAB99800AD0740 /* Assets.xcassets */,
+				033F91321CCAB99800AD0740 /* Info.plist */,
+				033F91211CCAB99800AD0740 /* Supporting Files */,
+			);
+			path = "Niko & Chip";
+			sourceTree = "<group>";
+		};
+		033F91211CCAB99800AD0740 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				033F91221CCAB99800AD0740 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		033F91381CCAB9B500AD0740 /* 主框架 */ = {
+			isa = PBXGroup;
+			children = (
+				033F91431CCABE7200AD0740 /* NCMainTabBarViewController.h */,
+				033F91441CCABE7200AD0740 /* NCMainTabBarViewController.m */,
+			);
+			name = "主框架";
+			sourceTree = "<group>";
+		};
+		033F913C1CCABD5F00AD0740 /*  控件 */ = {
+			isa = PBXGroup;
+			children = (
+				033F91401CCABE0A00AD0740 /* NCTabBar.h */,
+				033F91411CCABE0A00AD0740 /* NCTabBar.m */,
+				03125B721CCC6D2200097CDA /* NCHomeToolbar.h */,
+				03125B731CCC6D2200097CDA /* NCHomeToolbar.m */,
+				03125B781CCE887D00097CDA /* NCTableViewSelector.h */,
+				03125B791CCE887D00097CDA /* NCTableViewSelector.m */,
+			);
+			name = " 控件";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		033F911D1CCAB99800AD0740 /* Niko & Chip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 033F91351CCAB99800AD0740 /* Build configuration list for PBXNativeTarget "Niko & Chip" */;
+			buildPhases = (
+				033F911A1CCAB99800AD0740 /* Sources */,
+				033F911B1CCAB99800AD0740 /* Frameworks */,
+				033F911C1CCAB99800AD0740 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Niko & Chip";
+			productName = "Niko & Chip";
+			productReference = 033F911E1CCAB99800AD0740 /* Niko & Chip.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		033F91161CCAB99800AD0740 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NC;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Nico;
+				TargetAttributes = {
+					033F911D1CCAB99800AD0740 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = F3333B8SDR;
+					};
+				};
+			};
+			buildConfigurationList = 033F91191CCAB99800AD0740 /* Build configuration list for PBXProject "Niko & Chip" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 033F91151CCAB99800AD0740;
+			productRefGroup = 033F911F1CCAB99800AD0740 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				033F911D1CCAB99800AD0740 /* Niko & Chip */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		033F911C1CCAB99800AD0740 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				033F912E1CCAB99800AD0740 /* Assets.xcassets in Resources */,
+				032502571CDCB0CB00E4D8A9 /* Images.xcassets in Resources */,
+				0303EEC61CD2636C0015DE12 /* NCHomeTableViewCell.xib in Resources */,
+				0325024D1CDBCEF200E4D8A9 /* NCDairyEdite.xib in Resources */,
+				0373988A1CD4F82200818B35 /* NCImageViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		033F911A1CCAB99800AD0740 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0389E6001CD0A235007AD76C /* NCHomeTableViewController.m in Sources */,
+				037398891CD4F82200818B35 /* NCImageViewCell.m in Sources */,
+				03125B741CCC6D2200097CDA /* NCHomeToolbar.m in Sources */,
+				0303EED61CD26A9E0015DE12 /* NCDairyManager.m in Sources */,
+				0303EED31CD2694B0015DE12 /* NCDairy.m in Sources */,
+				033F91451CCABE7200AD0740 /* NCMainTabBarViewController.m in Sources */,
+				037398811CD4362400818B35 /* NCAddImageCell.m in Sources */,
+				033F91261CCAB99800AD0740 /* AppDelegate.m in Sources */,
+				032502501CDBD14100E4D8A9 /* NCImageSection.m in Sources */,
+				03125B7A1CCE887D00097CDA /* NCTableViewSelector.m in Sources */,
+				033F91421CCABE0A00AD0740 /* NCTabBar.m in Sources */,
+				037398851CD4F79000818B35 /* NCImageStore.m in Sources */,
+				033F91231CCAB99800AD0740 /* main.m in Sources */,
+				0303EECF1CD2668C0015DE12 /* NCHomeTableViewCell.m in Sources */,
+				0325024C1CDBCEF200E4D8A9 /* NCDairyEdite.m in Sources */,
+				0389E6031CD0A9C2007AD76C /* NCMainHeaderView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		033F91331CCAB99800AD0740 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		033F91341CCAB99800AD0740 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		033F91361CCAB99800AD0740 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Niko & Chip/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "NIco-go.Niko---Chip";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		033F91371CCAB99800AD0740 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Niko & Chip/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "NIco-go.Niko---Chip";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		033F91191CCAB99800AD0740 /* Build configuration list for PBXProject "Niko & Chip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				033F91331CCAB99800AD0740 /* Debug */,
+				033F91341CCAB99800AD0740 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		033F91351CCAB99800AD0740 /* Build configuration list for PBXNativeTarget "Niko & Chip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				033F91361CCAB99800AD0740 /* Debug */,
+				033F91371CCAB99800AD0740 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 033F91161CCAB99800AD0740 /* Project object */;
+}
