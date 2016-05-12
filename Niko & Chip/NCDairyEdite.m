@@ -11,28 +11,38 @@
 #import "NCAddImageCell.h"
 #import "NCImageViewCell.h"
 #import "NCImageStore.h"
-#import "NCDairyManager.h"
+#import "NCDairyDetailTitle.h"
+#import "NCDairyTagCell.h"
 #import "CommenDefine.h"
-@interface NCDairyEdite ()<UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface NCDairyEdite ()<UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate,PlaceholderDelegate>
 - (IBAction)tappedBackButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *dateButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
+@property (strong,nonatomic)NCDairyDetailTitle *detailTitle;
 @property (strong,nonatomic)NCImageSection *imageSection;
+@property (nonatomic)NSInteger currentIndex;
 @end
 
 @implementation NCDairyEdite
 
+//static int currentIndex=0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yy年MM月dd日 HH:mm"];
     self.dateButton.title=[formatter stringFromDate:self.dairy.createDate];
-    
+
+    self.tableview.rowHeight=UITableViewAutomaticDimension;
+    self.tableview.estimatedRowHeight=60;
     self.tableview.delegate=self;
     self.tableview.dataSource=self;
+//    NSLog(@"main:%p",self.tableview);
     NSMutableArray *imageKeys=self.dairy.imageKeys;
     self.imageSection=[NCImageSection initImageSectionWithImageKeys:imageKeys];
     self.imageSection.adelegate=self;
+    
+    UINib *nib=[UINib nibWithNibName:@"NCDairyTagCell" bundle:nil];
+    [self.tableview registerNib:nib forCellReuseIdentifier:@"TagCell"];
     
     
 }
@@ -46,6 +56,10 @@
 
 - (IBAction)tappedBackButton:(id)sender {
     if ([self.delegate respondsToSelector:@selector(dismisView)]) {
+        if ([self.detailTitle.textView.text isEqualToString:self.detailTitle.textView.placeholder]) {
+            self.dairy.dairyTitle=@"";
+        }else
+            self.dairy.dairyTitle=self.detailTitle.textView.text;
         [self.delegate dismisView];
     }else
     {
@@ -68,25 +82,48 @@
     if (section==0) {
         return 0;
     }else
-        return 1;
+        return self.dairy.dairytags.count+1;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (cell==nil) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    NCDairyTagCell *cell=[tableView dequeueReusableCellWithIdentifier:@"TagCell" forIndexPath:indexPath];
+    if (indexPath.row==self.dairy.dairytags.count) {
+        cell.dairyTag.isAdd=YES;
+        cell.dairyTag.placeholderDelegate=self;
+    }else
+    {
+        cell.dairyTag.isAdd=NO;
+        cell.dairyTag.text=self.dairy.dairytags[indexPath.row];
+        cell.dairyTag.tag=indexPath.row;
+//        NSLog(@"cell tag:%ld",cell.dairyTag.tag);
+        [cell.dairyTag setTextColor:[UIColor blackColor]];
+        cell.dairyTag.placeholderDelegate=self;
     }
     return cell;
 }
 
-#pragma tableView Delegate
+#pragma mark tableView Delegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.currentIndex=(int)indexPath.row;
+}
+
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     if (section==0) {
         return self.imageSection;
     }else
-        return  nil;
+    {
+        self.detailTitle=[[NCDairyDetailTitle alloc]initWithFrame:CGRectMake(0, 0, 320, 70)];
+        self.detailTitle.textView.placeholderDelegate=self;
+        if (self.dairy.dairyTitle.length>0) {
+            self.detailTitle.textView.text=self.dairy.dairyTitle;
+            [self.detailTitle.textView setTextColor:[UIColor blackColor]];
+        }
+        return self.detailTitle;
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -95,9 +132,10 @@
         return 100;
     }
     else
-        return 0;
+        return 70;
 }
 
+#pragma mark AddImageDelegate
 -(void)addImage:(UIButton *)sender
 {
     UIImagePickerController *imagePicker=[UIImagePickerController new];
@@ -107,7 +145,7 @@
     [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
-#pragma UIPickerImageViewDelgate
+#pragma mark UIPickerImageViewDelgate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
@@ -119,4 +157,20 @@
     [self.imageSection reloadData];
 }
 
+
+#pragma mark AddTag
+-(void)addTag:(NSString *)str
+{
+    [self.dairy.dairytags addObject:str];
+}
+
+-(void)saveTitleData:(NSString *)str
+{
+    self.dairy.dairyTitle=str;
+}
+
+-(void)saveTagData:(NSString *)str withIndex:(int)index
+{
+    self.dairy.dairytags[index]=str;
+}
 @end

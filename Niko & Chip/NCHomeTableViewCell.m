@@ -17,29 +17,13 @@
 
 #define DISPLAY_WIDTH [UIScreen mainScreen].bounds.size.width-2*5
 
-//-(instancetype)initWithFrame:(CGRect)frame
-//{
-//    self=[super initWithFrame:frame];
-////    self=[[[NSBundle mainBundle] loadNibNamed:@"NCHomeTableViewCell" owner:self options:nil] lastObject];
-////    return self;
-////        UIView *view=[[[NSBundle mainBundle] loadNibNamed:@"NCHomeTableViewCell" owner:self options:nil] lastObject];
-////    self.contentView;
-////        [self setValue:view forKeyPath:@"contentView"];
-//    NSLog(@"initFrame");
-//        return self;
-//}
 
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self=[super initWithStyle:style reuseIdentifier:reuseIdentifier];
     self=[[[NSBundle mainBundle] loadNibNamed:@"NCHomeTableViewCell" owner:self options:nil] lastObject];
-//    UIView *view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 30, 40)];
-//    view.backgroundColor=[UIColor blueColor];
-//    [self addSubview:view];
-//    NSLog(@"init style");
     return self;
-//
 }
 
 -(void)setDairy:(NCDairy *)dairy
@@ -48,12 +32,16 @@
         _dairy=dairy;
         self.tags=[NSArray arrayWithArray:_dairy.dairytags];
         self.titleLabel.text=_dairy.dairyTitle;
-        //        self.titleLabel.text=@"我相信，人生总有辉煌，光明总会在不远的地方，上天请让我，再坚强一些，当我将要倒下，在这无靠无依的大桥下";
+        NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
+        formatter.dateFormat=@"yyyy年MM月dd日 HH:mm";
+        self.dateLabel.text=[formatter stringFromDate:_dairy.createDate];
+        NSLog(@"123%@",self.dateLabel.text);
         UIFont *textFont=self.titleLabel.font;
-        CGFloat height=[self.titleLabel.text boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width-16, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:textFont} context:nil].size.height;
+        CGRect frame=self.titleLabel.frame;
+        frame.size.height=[self.titleLabel.text boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width-16, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:textFont} context:nil].size.height;
+        self.titleLabel.frame=frame;
         self.titleLabel.numberOfLines=0;
-        self.dateLabel.text=_dairy.dairyDate;
-        self.dairy.cellH=self.titleLabel.frame.origin.y+height+5;
+        self.dairy.cellH=self.titleLabel.frame.origin.y+frame.size.height+5;
         [self addSubview:self.cellImageView];
         [self addDairyTags:_dairy.dairytags];
     }

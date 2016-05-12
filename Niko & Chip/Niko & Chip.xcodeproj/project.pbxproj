@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03029B851CE2436000106393 /* NCDairyDetailTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 03029B841CE2436000106393 /* NCDairyDetailTitle.m */; };
+		03029B8B1CE395E000106393 /* NCPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03029B8A1CE395E000106393 /* NCPlaceholderTextView.m */; };
+		03029B8F1CE3AD4F00106393 /* NCDairyTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03029B8D1CE3AD4F00106393 /* NCDairyTagCell.m */; };
+		03029B901CE3AD4F00106393 /* NCDairyTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03029B8E1CE3AD4F00106393 /* NCDairyTagCell.xib */; };
 		0303EEC61CD2636C0015DE12 /* NCHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0303EEC51CD2636C0015DE12 /* NCHomeTableViewCell.xib */; };
 		0303EECF1CD2668C0015DE12 /* NCHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0303EECE1CD2668C0015DE12 /* NCHomeTableViewCell.m */; };
 		0303EED31CD2694B0015DE12 /* NCDairy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0303EED21CD2694B0015DE12 /* NCDairy.m */; };
@@ -31,6 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03029B831CE2436000106393 /* NCDairyDetailTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDairyDetailTitle.h; sourceTree = "<group>"; };
+		03029B841CE2436000106393 /* NCDairyDetailTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDairyDetailTitle.m; sourceTree = "<group>"; };
+		03029B891CE395E000106393 /* NCPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCPlaceholderTextView.h; sourceTree = "<group>"; };
+		03029B8A1CE395E000106393 /* NCPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCPlaceholderTextView.m; sourceTree = "<group>"; };
+		03029B8C1CE3AD4F00106393 /* NCDairyTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDairyTagCell.h; sourceTree = "<group>"; };
+		03029B8D1CE3AD4F00106393 /* NCDairyTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDairyTagCell.m; sourceTree = "<group>"; };
+		03029B8E1CE3AD4F00106393 /* NCDairyTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCDairyTagCell.xib; sourceTree = "<group>"; };
 		0303EEC51CD2636C0015DE12 /* NCHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCHomeTableViewCell.xib; sourceTree = "<group>"; };
 		0303EECD1CD2668C0015DE12 /* NCHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCHomeTableViewCell.h; sourceTree = "<group>"; };
 		0303EECE1CD2668C0015DE12 /* NCHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCHomeTableViewCell.m; sourceTree = "<group>"; };
@@ -118,11 +129,16 @@
 				0325024B1CDBCEF200E4D8A9 /* NCDairyEdite.xib */,
 				0325024E1CDBD14100E4D8A9 /* NCImageSection.h */,
 				0325024F1CDBD14100E4D8A9 /* NCImageSection.m */,
+				03029B831CE2436000106393 /* NCDairyDetailTitle.h */,
+				03029B841CE2436000106393 /* NCDairyDetailTitle.m */,
 				0373987E1CD4362400818B35 /* NCAddImageCell.h */,
 				0373987F1CD4362400818B35 /* NCAddImageCell.m */,
 				037398861CD4F82200818B35 /* NCImageViewCell.h */,
 				037398871CD4F82200818B35 /* NCImageViewCell.m */,
 				037398881CD4F82200818B35 /* NCImageViewCell.xib */,
+				03029B8C1CE3AD4F00106393 /* NCDairyTagCell.h */,
+				03029B8D1CE3AD4F00106393 /* NCDairyTagCell.m */,
+				03029B8E1CE3AD4F00106393 /* NCDairyTagCell.xib */,
 			);
 			name = "日记编辑页面";
 			sourceTree = "<group>";
@@ -188,6 +204,8 @@
 				03125B731CCC6D2200097CDA /* NCHomeToolbar.m */,
 				03125B781CCE887D00097CDA /* NCTableViewSelector.h */,
 				03125B791CCE887D00097CDA /* NCTableViewSelector.m */,
+				03029B891CE395E000106393 /* NCPlaceholderTextView.h */,
+				03029B8A1CE395E000106393 /* NCPlaceholderTextView.m */,
 			);
 			name = " 控件";
 			sourceTree = "<group>";
@@ -252,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				033F912E1CCAB99800AD0740 /* Assets.xcassets in Resources */,
+				03029B901CE3AD4F00106393 /* NCDairyTagCell.xib in Resources */,
 				032502571CDCB0CB00E4D8A9 /* Images.xcassets in Resources */,
 				0303EEC61CD2636C0015DE12 /* NCHomeTableViewCell.xib in Resources */,
 				0325024D1CDBCEF200E4D8A9 /* NCDairyEdite.xib in Resources */,
@@ -268,12 +287,15 @@
 			files = (
 				0389E6001CD0A235007AD76C /* NCHomeTableViewController.m in Sources */,
 				037398891CD4F82200818B35 /* NCImageViewCell.m in Sources */,
+				03029B8F1CE3AD4F00106393 /* NCDairyTagCell.m in Sources */,
 				03125B741CCC6D2200097CDA /* NCHomeToolbar.m in Sources */,
 				0303EED61CD26A9E0015DE12 /* NCDairyManager.m in Sources */,
+				03029B8B1CE395E000106393 /* NCPlaceholderTextView.m in Sources */,
 				0303EED31CD2694B0015DE12 /* NCDairy.m in Sources */,
 				033F91451CCABE7200AD0740 /* NCMainTabBarViewController.m in Sources */,
 				037398811CD4362400818B35 /* NCAddImageCell.m in Sources */,
 				033F91261CCAB99800AD0740 /* AppDelegate.m in Sources */,
+				03029B851CE2436000106393 /* NCDairyDetailTitle.m in Sources */,
 				032502501CDBD14100E4D8A9 /* NCImageSection.m in Sources */,
 				03125B7A1CCE887D00097CDA /* NCTableViewSelector.m in Sources */,
 				033F91421CCABE0A00AD0740 /* NCTabBar.m in Sources */,
