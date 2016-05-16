@@ -55,12 +55,12 @@
 
 
 - (IBAction)tappedBackButton:(id)sender {
-    if ([self.delegate respondsToSelector:@selector(dismisView)]) {
+    if ([self.delegate respondsToSelector:@selector(dismisView:)]) {
         if ([self.detailTitle.textView.text isEqualToString:self.detailTitle.textView.placeholder]) {
             self.dairy.dairyTitle=@"";
         }else
             self.dairy.dairyTitle=self.detailTitle.textView.text;
-        [self.delegate dismisView];
+        [self.delegate dismisView:self.dairy];
     }else
     {
         @throw [NSException exceptionWithName:@"delegate无法执行dismisView" reason:@"在delegate中实现dismisView方法" userInfo:nil];

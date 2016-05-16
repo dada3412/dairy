@@ -35,7 +35,7 @@
         NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
         formatter.dateFormat=@"yyyy年MM月dd日 HH:mm";
         self.dateLabel.text=[formatter stringFromDate:_dairy.createDate];
-        NSLog(@"123%@",self.dateLabel.text);
+//        NSLog(@"123%@",self.dateLabel.text);
         UIFont *textFont=self.titleLabel.font;
         CGRect frame=self.titleLabel.frame;
         frame.size.height=[self.titleLabel.text boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width-16, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:textFont} context:nil].size.height;

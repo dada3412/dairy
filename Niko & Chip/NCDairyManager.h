@@ -16,4 +16,6 @@
 -(void)deleteDairy:(NCDairy *)dairy;
 -(NCDairy *)dairyFromIndex:(NSUInteger)index;
 -(NSInteger)numbersOfDairy;
+-(void)updateDbWithDairy:(NCDairy *)dairy;
+-(void)addDairy:(NCDairy *)dairy;
 @end

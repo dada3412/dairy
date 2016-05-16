@@ -108,7 +108,7 @@
     NCHomeTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (cell==nil) {
         cell=[[NCHomeTableViewCell alloc]init];
-        NSLog(@"okok");
+//        NSLog(@"okok");
 //        NCDairy *dairy=self.dairyManager.dairies[indexPath.row];
 //        cell.dairy=dairy;
     }
@@ -127,8 +127,12 @@
 
 -(void)tappedRightButton:(UIButton *)sender
 {
-    NCDairy *dairy=[self.dairyManager createDairy];
-    dairy.dairyIndex=[self.dairyManager numbersOfDairy]-1;
+//    NCDairy *dairy=[self.dairyManager createDairy];
+//    dairy.dairyIndex=[self.dairyManager numbersOfDairy]-1;
+    NCDairy *dairy=[NCDairy new];
+    dairy.dairyIndex=[self.dairyManager numbersOfDairy];
+    dairy.createDate=[NSDate date];
+    [self.dairyManager addDairy:dairy];
     NCDairyEdite *detailDairyView=[NCDairyEdite new];
     detailDairyView.dairy=dairy;
     detailDairyView.delegate=self;
@@ -136,10 +140,11 @@
 }
 
 #pragma mark DairyDetail DismisViewDelegate
--(void)dismisView
+-(void)dismisView:(NCDairy *)dairy
 {
     [self dismissViewControllerAnimated:YES completion:^{
         [self.tableView reloadData];
+        [self.dairyManager updateDbWithDairy:dairy];
     }];
 //    [self dismissViewControllerAnimated:YES completion:nil];
     

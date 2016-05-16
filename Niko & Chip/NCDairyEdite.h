@@ -11,7 +11,7 @@
 #import "NCImageSection.h"
 @protocol DismisView <NSObject>
 
--(void)dismisView;
+-(void)dismisView:(NCDairy *)dairy;
 
 @end
 

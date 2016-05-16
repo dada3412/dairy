@@ -11,6 +11,7 @@
 		03029B8B1CE395E000106393 /* NCPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03029B8A1CE395E000106393 /* NCPlaceholderTextView.m */; };
 		03029B8F1CE3AD4F00106393 /* NCDairyTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03029B8D1CE3AD4F00106393 /* NCDairyTagCell.m */; };
 		03029B901CE3AD4F00106393 /* NCDairyTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03029B8E1CE3AD4F00106393 /* NCDairyTagCell.xib */; };
+		03029B921CE657E800106393 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 03029B911CE657E800106393 /* libsqlite3.0.tbd */; };
 		0303EEC61CD2636C0015DE12 /* NCHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0303EEC51CD2636C0015DE12 /* NCHomeTableViewCell.xib */; };
 		0303EECF1CD2668C0015DE12 /* NCHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0303EECE1CD2668C0015DE12 /* NCHomeTableViewCell.m */; };
 		0303EED31CD2694B0015DE12 /* NCDairy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0303EED21CD2694B0015DE12 /* NCDairy.m */; };
@@ -42,6 +43,7 @@
 		03029B8C1CE3AD4F00106393 /* NCDairyTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDairyTagCell.h; sourceTree = "<group>"; };
 		03029B8D1CE3AD4F00106393 /* NCDairyTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDairyTagCell.m; sourceTree = "<group>"; };
 		03029B8E1CE3AD4F00106393 /* NCDairyTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCDairyTagCell.xib; sourceTree = "<group>"; };
+		03029B911CE657E800106393 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		0303EEC51CD2636C0015DE12 /* NCHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NCHomeTableViewCell.xib; sourceTree = "<group>"; };
 		0303EECD1CD2668C0015DE12 /* NCHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCHomeTableViewCell.h; sourceTree = "<group>"; };
 		0303EECE1CD2668C0015DE12 /* NCHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCHomeTableViewCell.m; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03029B921CE657E800106393 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +149,7 @@
 		033F91151CCAB99800AD0740 = {
 			isa = PBXGroup;
 			children = (
+				03029B911CE657E800106393 /* libsqlite3.0.tbd */,
 				032502561CDCB0CB00E4D8A9 /* Images.xcassets */,
 				033F91461CCAC11900AD0740 /* CommenDefine.h */,
 				0303EED01CD2691D0015DE12 /* data */,

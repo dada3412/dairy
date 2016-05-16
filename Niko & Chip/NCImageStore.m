@@ -10,7 +10,6 @@
 #import "CommenDefine.h"
 @interface NCImageStore()
 @property(nonatomic,strong)NSMutableDictionary *imagesDic;
-//@property(nonatomic,strong)NSMutableDictionary *image;
 @end
 @implementation NCImageStore
 
@@ -47,10 +46,18 @@ static NCImageStore * instance;
     return instance;
 }
 
+-(NSString *)imagePathForKey:(NSString *)key
+{
+    return  [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:key];
+}
 
 -(void)setImage:(UIImage *)image forKey:(NSString *)key
 {
     [self.imagesDic setObject:[self imagesDicFromImage:image] forKey:key];
+    NSString *imagePath=[self imagePathForKey:key];
+    NSData *imageData=UIImageJPEGRepresentation(image, 1.0);
+    
+    [imageData writeToFile:imagePath atomically:YES];
 }
 
 -(NSDictionary *)imagesDicFromImage:(UIImage *)image
@@ -95,24 +102,58 @@ static NCImageStore * instance;
 -(UIImage *)thumbnailImageFromKey:(NSString *)key
 {
     NSDictionary *dic=self.imagesDic[key];
+    if (!dic) {
+        NSString *imagePath=[self imagePathForKey:key];
+        UIImage *image=[UIImage imageWithContentsOfFile:imagePath];
+        if (image) {
+            dic=[self imagesDicFromImage:image];
+        }else
+            NSLog(@"unable to find image");
+    }
     return dic[@"thumbnailImage"];
 }
 
 -(UIImage *)middleImageFromKey:(NSString *)key
 {
     NSDictionary *dic=self.imagesDic[key];
+    if (!dic) {
+        NSString *imagePath=[self imagePathForKey:key];
+        UIImage *image=[UIImage imageWithContentsOfFile:imagePath];
+        if (image) {
+            dic=[self imagesDicFromImage:image];
+        }else
+            NSLog(@"unable to find image");
+    }
     return dic[@"middleImage"];
 }
 
 -(UIImage *)largeImageFromKey:(NSString *)key
 {
     NSDictionary *dic=self.imagesDic[key];
+    if (!dic) {
+        NSString *imagePath=[self imagePathForKey:key];
+        UIImage *image=[UIImage imageWithContentsOfFile:imagePath];
+        if (image) {
+            dic=[self imagesDicFromImage:image];
+        }else
+            NSLog(@"unable to find image");
+    }
     return dic[@"largeImage"];
 }
 
 -(NSDictionary *)imageDicFromKey:(NSString *)key
 {
-    return [self.imagesDic objectForKey:key];
+    
+    NSDictionary *dic=self.imagesDic[key];
+    if (!dic) {
+        NSString *imagePath=[self imagePathForKey:key];
+        UIImage *image=[UIImage imageWithContentsOfFile:imagePath];
+        if (image) {
+            dic=[self imagesDicFromImage:image];
+        }else
+            NSLog(@"unable to find image");
+    }
+    return dic;
 }
 
 -(void)deleteImageFromKey:(NSString *)key;
