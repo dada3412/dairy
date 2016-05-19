@@ -38,7 +38,7 @@
     layout.scrollDirection=UICollectionViewScrollDirectionHorizontal;
     return imageSection;
 }
-#pragma dateSource
+#pragma mark dateSource
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;

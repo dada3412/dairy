@@ -42,8 +42,19 @@
         self.titleLabel.frame=frame;
         self.titleLabel.numberOfLines=0;
         self.dairy.cellH=self.titleLabel.frame.origin.y+frame.size.height+5;
-        [self addSubview:self.cellImageView];
-        [self addDairyTags:_dairy.dairytags];
+        NSString *imageKey=[dairy.imageKeys firstObject];
+        if (imageKey.length>0) {
+            self.cellImageView.hidden=NO;
+            UIImage *image=[[NCImageStore shareImage] middleImageFromKey:imageKey];
+            self.cellImageView.image=image;
+            CGFloat imageY=self.dairy.cellH;
+//            CGFloat imageViewW=DISPLAY_WIDTH;
+            self.cellImageView.frame=(CGRect){{5,imageY},image.size};
+            self.dairy.cellH+=image.size.height+5;
+        }else
+            self.cellImageView.hidden=YES;
+//        [self.contentView addSubview:self.cellImageView];
+//        [self addDairyTags:_dairy.dairytags];
     }
 }
 
@@ -70,28 +81,37 @@
     self.dairy.cellH+=10;
 }
 
+//-(UIImageView *)cellImageView
+//{
+//    if (!_cellImageView) {
+//        if (self.dairy.imageKeys) {
+//            NSString *str=[self.dairy.imageKeys firstObject];
+//            if (str.length>0) {
+//                CGFloat imageY=self.dairy.cellH;
+//                CGFloat imageViewW=DISPLAY_WIDTH;
+//                UIImage *image=[[NCImageStore shareImage] middleImageFromKey:str];
+//                CGSize imageSize=image.size;
+//                _cellImageView=[[UIImageView alloc]initWithFrame:CGRectMake(5, imageY, imageViewW,imageSize.height)];
+//                _cellImageView.image=image;
+//                _cellImageView.contentMode=UIViewContentModeScaleToFill;
+////                NSLog(@"cellH1=%lf",self.dairy.cellH);
+//                self.dairy.cellH+=imageSize.height;
+//                [self.contentView addSubview:_cellImageView];
+////                NSLog(@"cellH image=%lf",self.dairy.cellH);
+////                return _cellImageView;
+//            }
+//        }
+////        return _cellImageView;
+//
+//    }
+//    return _cellImageView;
+//}
+
 -(UIImageView *)cellImageView
 {
     if (!_cellImageView) {
-        if (self.dairy.imageKeys) {
-            NSString *str=[self.dairy.imageKeys firstObject];
-            if (str.length>0) {
-                CGFloat imageY=self.dairy.cellH;
-                CGFloat imageViewW=DISPLAY_WIDTH;
-                NSString *imagekey=[_dairy.imageKeys firstObject];
-                UIImage *image=[[NCImageStore shareImage] middleImageFromKey:imagekey];
-                CGSize imageSize=image.size;
-                _cellImageView=[[UIImageView alloc]initWithFrame:CGRectMake(5, imageY, imageViewW,imageSize.height)];
-                _cellImageView.image=image;
-                _cellImageView.contentMode=UIViewContentModeScaleToFill;
-//                NSLog(@"cellH1=%lf",self.dairy.cellH);
-                self.dairy.cellH+=imageSize.height;
-//                NSLog(@"cellH image=%lf",self.dairy.cellH);
-                return _cellImageView;
-            }
-        }
-        return _cellImageView;
-
+        _cellImageView=[[UIImageView alloc]init];
+        [self.contentView addSubview:_cellImageView];
     }
     return _cellImageView;
 }

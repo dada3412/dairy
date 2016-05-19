@@ -64,14 +64,20 @@ static NCDairyManager *dairyManager;
             dairy.dairytags=[NSMutableArray arrayWithArray:tagsArray];
             
             NSString *imageKeys=(char *)sqlite3_column_text(state, 5)?[NSString stringWithUTF8String:(char *)sqlite3_column_text(state, 5)]:nil;
-            NSArray *imageKeysArray=[imageKeys componentsSeparatedByString:@"/*@"];
-            dairy.imageKeys=[NSMutableArray arrayWithArray:imageKeysArray];
+//            NSLog(@"%s",sqlite3_column_text(state, 5));
+            if (![imageKeys isEqualToString:@"(null)"] ) {
+                NSArray *imageKeysArray=[imageKeys componentsSeparatedByString:@"/*@"];
+                dairy.imageKeys=[NSMutableArray arrayWithArray:imageKeysArray];
+            }
+            
             
             NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
             [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
             NSString *dateString=(char *)sqlite3_column_text(state, 6)?[NSString stringWithUTF8String:(char *)sqlite3_column_text(state, 6)]:nil;
             dairy.createDate=[formatter dateFromString:dateString];
-
+            
+            dairy.cellH=sqlite3_column_double(state, 7);
+            
             [self.privateDairies addObject:dairy];
         }
     }
@@ -174,7 +180,11 @@ static NCDairyManager *dairyManager;
     NSString *dateString=[formatter stringFromDate:dairy.createDate];
     
     NSString *dairyTags=[dairy.dairytags componentsJoinedByString:@"/*@"];
-    NSString *imageKeys=[dairy.imageKeys componentsJoinedByString:@"/*@"];
+    NSString *imageKeys=nil;
+    if (dairy.imageKeys.count>0) {
+        imageKeys=[dairy.imageKeys componentsJoinedByString:@"/*@"];
+    }
+//    dairy.imageKeys?[dairy.imageKeys componentsJoinedByString:@"/*@"]:nil;
     NSString *updateSQLString=[NSString stringWithFormat:@"update dairy set dairyTitle='%@',dairyRemarks='%@', dairyTags='%@', imageKeys='%@', createDate='%@', cellH=%lf where dairyIndex=%lu",dairy.dairyTitle , dairy.dairyRemarks,dairyTags, imageKeys, dateString, dairy.cellH,(unsigned long)dairy.dairyIndex];
     
     const char *updateSQL=[updateSQLString UTF8String];

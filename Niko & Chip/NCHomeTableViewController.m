@@ -107,13 +107,15 @@
 //    NCHomeTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     NCHomeTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (cell==nil) {
-        cell=[[NCHomeTableViewCell alloc]init];
-//        NSLog(@"okok");
+        cell=[[NCHomeTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        NSLog(@"okok");
 //        NCDairy *dairy=self.dairyManager.dairies[indexPath.row];
 //        cell.dairy=dairy;
     }
     NCDairy *dairy=self.dairyManager.dairies[indexPath.row];
     cell.dairy=dairy;
+
+
     
     return cell;
 }
